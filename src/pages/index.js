@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import output from "../utils/output"
+import sleep from "../utils/sleep"
 import "../styles/scrollbar.module.css"
 import terminalClass from "../styles/index.module.css"
 
@@ -48,14 +49,6 @@ const Terminal = () => {
     }, Math.floor(Math.random() * 220) + 50)
   }
 
-  function sleep(milliseconds) {
-    const date = Date.now()
-    let currentDate = null
-    do {
-      currentDate = Date.now()
-    } while (currentDate - date < milliseconds)
-  }
-
   function feedbacker() {
     setPreArray(preArray => [...preArray, `${output[i]}`])
     window.scrollTo(0, document.body.scrollHeight)
@@ -81,14 +74,14 @@ const Terminal = () => {
         {preArray.map((initializeMessage, i) => {
           if (i < output.length - 2) {
             return (
-              <pre className={terminalClass.init}>
+              <pre key={i} className={terminalClass.init}>
                 {initializeMessage}
                 <br></br>
               </pre>
             )
           } else {
             return (
-              <pre className={terminalClass.init}>
+              <pre key={i} className={terminalClass.init}>
                 <br></br>
                 <br></br>
                 {initializeMessage}
