@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import output from "../utils/output"
+import { primaryRoute } from "../routes/primary"
 import sleep from "../utils/sleep"
 import "../styles/scrollbar.module.css"
 import terminalClass from "../styles/index.module.css"
@@ -59,7 +60,7 @@ const Terminal = () => {
         feedbacker()
       } else {
         sleep(1500)
-        navigate("/homepage")
+        navigate(primaryRoute.home)
       }
     }, time)
   }
