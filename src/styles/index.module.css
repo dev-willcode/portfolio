@@ -51,7 +51,7 @@ body {
 }
 
 .term:after {
-  content: "_";
+  content: '_';
   opacity: 1;
   animation: cursor 1s infinite;
 }

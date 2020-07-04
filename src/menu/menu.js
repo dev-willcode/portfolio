@@ -1,7 +1,7 @@
-import React from "react"
-import { primaryRoute } from "../routes/primary"
-import { Link } from "gatsby"
-import menuStyles from "../styles/sidebar.module.css"
+import React from 'react'
+import { primaryRoute } from '../routes/primary'
+import { Link } from 'gatsby'
+import menuStyles from '../styles/sidebar.module.css'
 
 const Menu = () => {
   return (
@@ -9,7 +9,7 @@ const Menu = () => {
       <div className={menuStyles.displayPicture}>
         <img
           src={
-            "https://media-exp1.licdn.com/dms/image/C5603AQGKeX4pes3Zpw/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=JMWcnUmjlJDJlRIPd0nPFP1htv_T5X2UUwVsZSsDNDo"
+            'https://media-exp1.licdn.com/dms/image/C5603AQGKeX4pes3Zpw/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=JMWcnUmjlJDJlRIPd0nPFP1htv_T5X2UUwVsZSsDNDo'
           }
           alt="Display"
         />

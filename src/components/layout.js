@@ -1,8 +1,8 @@
-import React from "react"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import Menu from "../menu/menu"
-import layoutStyles from "../styles/layout.module.css"
+import React from 'react'
+import Header from '../components/header'
+import Footer from '../components/footer'
+import Menu from '../menu/menu'
+import layoutStyles from '../styles/layout.module.css'
 
 const Layout = ({ children, header }) => {
   return (
