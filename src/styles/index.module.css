@@ -23,12 +23,10 @@ body {
 }
 
 .rootname {
-  font-family: monospace;
   color: rgb(69, 236, 69);
 }
 
 .term {
-  font-family: monospace;
   color: #fff;
   opacity: 0.8;
   font-size: 1.5em;
@@ -40,7 +38,6 @@ body {
 }
 
 .init {
-  font-family: monospace;
   color: #fff;
   opacity: 0.8;
   font-size: 1.5em;
