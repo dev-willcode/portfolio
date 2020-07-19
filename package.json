@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A portfolio website of Sayan Mondal",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run format"
+      "pre-commit": "npm run format && npm run lint"
     }
   },
   "repository": {

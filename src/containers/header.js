@@ -6,7 +6,7 @@ import styles from '../styles/header.module.css'
 
 const Header = ({ children }) => {
   return (
-    <AppBar position="static" className={styles.main}>
+    <AppBar color="default" position="static" className={styles.root}>
       <Toolbar variant="dense">
         <Typography variant="h6" color="inherit">
           {children}

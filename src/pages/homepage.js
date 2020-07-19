@@ -1,9 +1,14 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../containers/layout'
+import CurrentlyReading from '../components/CurrentlyReading/CurrentlyReading'
 import '../styles/homepage.module.css'
 
 const Home = () => {
-  return <Layout header={'Home'}></Layout>
+  return (
+    <Layout header={'Home'}>
+      <CurrentlyReading />
+    </Layout>
+  )
 }
 
 export default Home
