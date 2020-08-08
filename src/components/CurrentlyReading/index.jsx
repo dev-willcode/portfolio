@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Paper from '@material-ui/core/Paper'
-import LinearProgress from '@material-ui/core/LinearProgress'
-import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
+import {
+  Paper,
+  LinearProgress,
+  Typography,
+  Box,
+  Button,
+} from '@material-ui/core'
 import styles from '../../styles/currentlyReading.module.css'
-import Button from '@material-ui/core/Button'
 
 const LinearProgressWithLabel = ({ value }) => {
   return (
