@@ -1,99 +1,181 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# gatsby-starter-typescript-seo-grand 🌟
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+### An opinionated starter library for creating React applications with Gatsby (v2) and TypeScript along with good SEO and PWA support.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+### [View Demo](https://gatsby-starter-typescript-seo-grand.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/597e0057-8bee-4e33-a49f-1988d2c203ce/deploy-status)](https://app.netlify.com/sites/gatsby-starter-typescript-seo-grand/deploys)
 
-## 🚀 Quick start
+This starter library is pre-configured with the following integrations:
 
-1.  **Create a Gatsby site.**
+-   **TypeScript** for type-safe code.
+-   **Styled-Components** for all your styles.
+-   **modern-css-reset** for a reset of sensible default styles.
+-   **gatsby-image and gatsby-transformer-sharp** for optimized images.
+-   **gatsby-plugin-manifest / SEO component** for an SEO-friendly PWA.
+-   **Jest and React Testing library** for snapshots and unit tests.
+-   **gatsby-plugin-catch-links** for avoiding the browser having to refresh the whole page when navigating between local pages.
+-   **ESLint with an emphasis on functional patterns (with Prettier and TypeScript integration)** to make your code look its best.
+-   **React Axe and React A11y for accessibility** so that your site is awesome for everyone.
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+## Installation
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+You will need to have `node` and `npm` installed on your computer.
 
-1.  **Start developing.**
+You can either use `npx` or install the `gatsby-cli` globally.
 
-    Navigate into your new site’s directory and start it up.
+The `npx` way:
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+```sh
+npx gatsby new my-site https://github.com/S-ayanide/gatsby-starter-typescript-seo-grand
+```
 
-1.  **Open the source code and start editing!**
+or the global way:
 
-    Your site is now running at `http://localhost:8000`!
+```sh
+npm i -g gatsby-cli
+gatsby new my-site https://github.com/S-ayanide/gatsby-starter-typescript-seo-grand
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## Usage
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+To start the development servers:
 
-## 🧐 What's inside?
+```sh
+npm run develop
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+If all was successful, you should see links to two development servers in the Node terminal. You can open these url in any browser that you would like.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+1. [http://localhost:8080](http://localhost:8080):
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+This is the development server that allows you to preview your website. It comes with hot-module reloading, which means that you should see your changes almost immediately without having to refresh the browser tab.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+2. [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql):
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+This is the development server that allows you to interact with the your site's GraphQL data via the GraphiQL IDE.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+### Available Scripts
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+| Script       | Description                                                                         |
+| ------------ | :---------------------------------------------------------------------------------- |
+| `dev`        | Start the development server with hot module reloading.                             |
+| `format`     | Format your code with Prettier.                                                     |
+| `clean`      | Delete the `.cache` and `public` directories.                                       |
+| `test`       | Run your Jest tests once.                                                           |
+| `test:watch` | Run your Jest tests in watch mode.                                                  |
+| `lint`       | Lint your code with ESLint.                                                         |
+| `lint:watch` | Lint your code with ESLint in watch mode.                                           |
+| `lint:fix`   | Lint your code with ESLint and attempt to fix linting issues.                       |
+| `serve`      | Serve the production build of your site for testing.                                |
+| `build`      | Compile your application and make it ready for deployment                           |
+| `update`     | Updates the package.json to the latest dependency versions using npm-check-updates. |
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+## Styling
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+This library is pre-configured with [styled-components](https://www.styled-components.com/).
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+#### Global Styles
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+Global styles are defined in the `src/styles/global.css` file.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+The global style also includes the styles from [css-modern-reset](https://github.com/hankchizljaw/modern-css-reset), which aims to provide a sensible reset of browser styles.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+#### Theme
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+You can define your theme styles in the `/src/styles/theme` file. The theme will be available in any styled-component via `props.theme` and to any other component via the `useTheme` hook.
 
-## 🎓 Learning Gatsby
+#### Handling Media Queries
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+The theme utilizes the [use-media](https://github.com/streamich/use-media) library, which allows you to track the state of a CSS media queries. This works by passing a boolean for each screen size that you defined in your theme. Just define your screen sizes in `src/styles/theme`.
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+#### The CSS Prop
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+This starter is also preconfigured to work with the `css` prop:
 
-## 💫 Deploy
+```jsx
+import styled from "styled-components";
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+const MyComponent = () => (
+	<div>
+		<h1
+			css={`
+				color: #333;
+			`}
+		>
+			Hello World!
+		</h1>
+	</div>
+);
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+_Note: The `css` prop does not play nicely with the `jsx-no-multiline-js` ESLint rule. You may want to disable the rule if you plan on using the `css` prop. This can be done in the `.eslintrc.js` file._
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+I personally do not use the `css` prop and prefer to define styled-components outside of the component definition. My general rule is if the component that is using a styled-component is the only component that uses it, I define the styled-component in the same file. Otherwise, I will move it out to a `components/common` directory.
+
+```tsx
+import styled from "styled-components";
+
+const Heading = styled.h1`
+	color: #333;
+`;
+
+const MyComponent = () => (
+	<div>
+		<Heading>Hello World!</Heading>
+	</div>
+);
+```
+
+## Preview
+
+<img src="https://i.ibb.co/vV515Kt/Gatsby.png" alt="Gatsby Starter Typescript SEO Grade Preview" style="max-width: 100%;" />
+
+## Linting
+
+This project includes a combination of ESLint and React-A11y rules for React and TypeScript code, which are extended from the [eslint-config-gojutin](https://github.com/gojutin/eslint-config-gojutin) npm package. Many of the rules favor a functional approach with a strong emphasis on immutability and strong type definitions. Since all of the rules and dependencies are included in this package, you can easily remove it if you prefer to wire up your own linting configuration.
+
+The rules are listed as key/value pairs. The key represents the rule name and the value (number) represents the setting of the rule:
+
+|     |       |
+| --- | :---- |
+| `0` | off   |
+| `1` | warn  |
+| `2` | error |
+
+Here is an example of a rule:
+
+```
+"immutable/no-this": 2
+```
+
+This particular rule disallows the use of the `this` keyword, which will result in an error.
+
+## Deployment
+
+Lint your files and fix all linting issues.
+
+```sh
+npm run lint
+```
+
+Run your test suite and fix any broken tests.
+
+```sh
+npm run test
+```
+
+Compile a production build to the `/public` directory.
+
+```sh
+npm run build
+```
+
+## Lighthouse Audit Score 💯
+
+<img src="https://i.ibb.co/3NpYMsT/Lighthouse-Audit.png" style="max-width: 100%;" alt="Lighthouse Score" />
+
+## TODOS
+
+-   Write more robust unit tests for all components and custom hook.
+-   Possibly add support for MDX and markdown.
+
+That's about it. Now, build something awesome 😀
