@@ -1,50 +1,31 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import { useStaticQuery, graphql } from 'gatsby'
 import { theme } from '../../styles'
+
 // Components
-import { Link } from '../link'
+import Footer from './Footer'
+import Header from './Header'
+import { Menu } from '../menu'
+
+interface Ilayout {
+  children: React.ReactNode
+  header: string
+}
 
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 2rem;
+  margin-left: 25%; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0;
 `
 
-const Title = styled.h1`
-  font-size: ${(props) => (props.theme.screens.sm ? '1.8rem' : '2.2rem')};
-  margin: 20px 0px;
-`
-
-const Tagline = styled.h2`
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.textSecondary};
-`
-
-const Layout: React.FC = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
-
-  const { title, description } = data.site.siteMetadata
-
+const Layout: React.FC<Ilayout> = ({ children, header }) => {
   return (
     <ThemeProvider theme={theme()}>
+      <Menu />
       <Container>
-        <Link to="/">
-          <Title>{title.toUpperCase()}</Title>
-        </Link>
-        <Tagline>{description}</Tagline>
-        <br />
-        <main>{children}</main>
+        <Header>{header}</Header>
+        {children}
+        <Footer />
       </Container>
     </ThemeProvider>
   )
