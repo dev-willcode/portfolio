@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby'
-import output from '../utils/output'
+import React, { useEffect, useState } from 'react'
 import { primaryRoute } from '../routes/primary'
-import sleep from '../utils/sleep'
-import '../styles/scrollbar.module.css'
 import terminalClass from '../styles/index.module.css'
+import '../styles/scrollbar.module.css'
+import output from '../utils/output'
+import sleep from '../utils/sleep'
 
 const Terminal = () => {
   var i = 0
