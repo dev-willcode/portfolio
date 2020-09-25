@@ -18,7 +18,7 @@ const Sidebar = styled.div`
 const DisplayPicture = styled.div`
   margin-top: 10%;
   display: inline-block;
-  margin-left: 20%;
+  margin-left: ${props => (props.theme.screens.sm ? '25%' : '20%')};
   height: 150px;
   width: 150px;
   border-radius: 100%;

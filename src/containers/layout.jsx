@@ -2,18 +2,25 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer'
 import Menu from '../menu/menu'
-import layoutStyles from '../styles/layout.module.css'
+import styled, { ThemeProvider } from 'styled-components'
+import { theme } from '../styles'
+
+const Main = styled.div`
+  margin-left: 25%; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0;
+`
 
 const Layout = ({ children, header }) => {
   return (
-    <div>
+    <ThemeProvider theme={theme()}>
       <Menu />
-      <div className={layoutStyles.main}>
+      <Main>
         <Header>{header}</Header>
         {children}
         <Footer />
-      </div>
-    </div>
+      </Main>
+    </ThemeProvider>
   )
 }
 
