@@ -1,29 +1,32 @@
-import { Link as GatsbyLink } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
-import { Avatar } from '../components/image-fetch/Avatar';
-import { primaryRoute } from '../routes/primary';
+import { Link as GatsbyLink } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
+import { Avatar } from '../components/image-fetch/Avatar'
+import { primaryRoute } from '../routes/primary'
+import { useTheme } from '../styles'
 
 const Sidebar = styled.div`
-  height: 100%;
-  width: 25%;
+  height: ${(props) => props.theme.screens.lg ? '30%' : '100%'};
+  width: ${(props) => props.theme.screens.lg ? '100%' : '25%'};
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #272727;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: ${(props) => props.theme.screens.lg ? '0' : '20px'};
 `
 
 const DisplayPicture = styled.div`
-  margin-top: 10%;
+  margin-top: ${(props) => props.theme.screens.lg ? '2%' : '10%'};
   display: flex;
   justify-content: center;
+  width: ${(props) => props.theme.screens.lg ? '10%' : '100%'};
+  margin-left: ${(props) => props.theme.screens.lg ? '45%' : '0'};
 `
 
 const PersonalDetails = styled.div`
-  margin-top: 5%;
+  margin-top: ${(props) => props.theme.screens.lg ? '1rem' : '5%'};
   color: white;
   text-align: center;
   margin-bottom: 20px;
@@ -46,6 +49,9 @@ const MenuList = styled.li`
 `
 
 const Menu = () => {
+
+  const {lg} = useTheme().screens;
+  
   return (
     <Sidebar>
       <DisplayPicture>

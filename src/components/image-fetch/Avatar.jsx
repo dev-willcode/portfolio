@@ -1,14 +1,14 @@
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
-import React from "react";
-import styled from "styled-components";
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   width: 100%;
   height: fit-content;
-`;
+`
 
-const Avatar  = () => {
+const Avatar = () => {
   const data = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "profile_picture.jpeg" }) {
@@ -20,17 +20,17 @@ const Avatar  = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
     <Wrapper>
       <Img
         fluid={data.image.childImageSharp.fluid}
         alt="Choas Bird taking feedback"
-        style={{ margin: "auto" }}
+        style={{ margin: 'auto' }}
       />
     </Wrapper>
-  );
-};
+  )
+}
 
-export { Avatar };
+export { Avatar }
