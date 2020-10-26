@@ -1,7 +1,8 @@
-import { Link as GatsbyLink } from 'gatsby'
-import React from 'react'
-import styled from 'styled-components'
-import { primaryRoute } from '../routes/primary'
+import { Link as GatsbyLink } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
+import { Avatar } from '../components/image-fetch/Avatar';
+import { primaryRoute } from '../routes/primary';
 
 const Sidebar = styled.div`
   height: 100%;
@@ -17,14 +18,8 @@ const Sidebar = styled.div`
 
 const DisplayPicture = styled.div`
   margin-top: 10%;
-  display: inline-block;
-  margin-left: ${props => (props.theme.screens.sm ? '25%' : '20%')};
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 `
 
 const PersonalDetails = styled.div`
@@ -54,12 +49,7 @@ const Menu = () => {
   return (
     <Sidebar>
       <DisplayPicture>
-        <img
-          src={
-            'https://media-exp1.licdn.com/dms/image/C5603AQGKeX4pes3Zpw/profile-displayphoto-shrink_400_400/0?e=1598486400&v=beta&t=JMWcnUmjlJDJlRIPd0nPFP1htv_T5X2UUwVsZSsDNDo'
-          }
-          alt="Display"
-        />
+        <Avatar />
       </DisplayPicture>
       <PersonalDetails>
         <h2 style={{ fontWeight: '600', letterSpacing: '1px' }}>
